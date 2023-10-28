@@ -1,0 +1,58 @@
+h1{
+    font-family: Gabarito;
+    font-size: xx-large;
+    color: black;
+}
+h2{
+    font-family: Gabarito;
+    font-size: x-large;
+    color: rgb(66, 48, 3);
+}
+h3{
+    font-family: Gabarito;
+    font-size: large;
+    color: brown;
+}
+p{
+    font-family: Hanken Grotesk;
+    font-size: small;
+    color: darkslategrey;
+}
+a{
+    font-family: Hanken Grotesk;
+    font-size: small;
+    color: darkred;
+}
+li{
+    font-family: Hanken Grotesk;
+    font-size: small;
+    color: black;
+}
+#progress{
+    font-family: Gabarito;
+    font-size: large;
+    color: black;
+}
+#instagram{
+    font-family: Gabarito;
+    font-size: medium;
+    color: black;
+}
+#desc{
+    color: black;
+}
+article{
+    border-radius: 25px;
+    background: rgb(239, 209, 169);
+    padding: 20px;
+}
+input{
+    font-family: Hanken Grotesk;
+    font-size: small;
+    color: darkslategrey;
+}
+button{
+    font-family: Hanken Grotesk;
+    font-size: small;
+    color: darkslategrey;
+}

@@ -4,25 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marvin's Dev Blog</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <!-- Hanken Grotesk Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk&display=swap" rel="stylesheet">
+    <!-- Gabarito Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@800&family=Hanken+Grotesk&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <h1>Welcome to my Developer Blog!</h1>
-        <p>
+        <p id="desc">
             On this site, I will be posting <em>weekly</em> updates on
-            my progress of learning <b>Front-End Development</b>.
+            my progress of learning <u>Front-End Development</u>.
             <br>As I learn more about FED, I will hopefully improve the
             website along the way.
             <br>Thanks for joining along! :)
         </p>
     </header>
     <nav>
-        <h2>Current progress</h2>
+        <h2 id="progress">Current progress</h2>
             <ul>
-                <li>Week 3</li>
-                <li>Week 2</li>
+                <li>CSS, Media Queries, Flex, XD (Week 3)</li>
+                <li>HTML Semantics and CSS (Week 2)</li>
             </ul>
     </nav>
+    <article>
+        <h2>Week 3</h2>
+        <h3>CSS, Media Queries, Flex, XD</h3>
+        <p>
+            This week, I have learnt about HTML Forms,
+        </p>
+        <form action="/some-url" method="GET">
+            <input type="text" placeholder="Type something!">
+        </form>
+        <p>
+            nested elements, descendant selector
+            (best to use at <b>most 3 levels</b>), grouping selectors
+            and CSS style inheritance. I have also learnt about
+            style cascade and specificity with the importance of
+            "!important". Media Queries were useful in website optimization
+            for different screen sizes. Positioning and Flexbox also
+            brought about more dynamic and graphical website designs.
+            The use of wireframs in the design process can also aid in
+            visualization and planning for the creation of the website design.
+        </p>
+    </article>
+    <br>
     <article>
         <h2>Week 2</h2>
         <h3>HTML Semantics and CSS</h3>
@@ -30,11 +61,12 @@
             This week, I learnt about the different sementics used to
             categorise parts of a website to make it more organized.
             I have also learnt about the features of CSS and stylesheets
-            to make my website more aesthetic.
+            to make my website more aesthetic. For example, the use external
+            style sheets, ID attributes, importing fonts etc.
         </p>
     </article>
     <footer>
-        <p>My Instagram profile:</p>
+        <p id="instagram">My Instagram profile:</p>
         <img alt="My Profile Picture" src="https://i.ibb.co/1v5s7M0/pfp2.jpg"
         width="50" height="50"
         title="caffienated.">
