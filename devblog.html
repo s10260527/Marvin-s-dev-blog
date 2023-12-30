@@ -4,74 +4,237 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marvin's Dev Blog</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
     <link rel="stylesheet" href="style.css" type="text/css">
-    <!-- Hanken Grotesk Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk&display=swap" rel="stylesheet">
-    <!-- Gabarito Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@800&family=Hanken+Grotesk&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <h1>Welcome to my Developer Blog!</h1>
-        <p id="desc">
-            On this site, I will be posting <em>weekly</em> updates on
-            my progress of learning <u>Front-End Development</u>.
-            <br>As I learn more about FED, I will hopefully improve the
-            website along the way.
-            <br>Thanks for joining along! :)
-        </p>
-    </header>
-    <nav>
-        <h2 id="progress">Current progress</h2>
-            <ul>
-                <li>CSS, Media Queries, Flex, XD (Week 3)</li>
-                <li>HTML Semantics and CSS (Week 2)</li>
-            </ul>
-    </nav>
-    <article>
-        <h2>Week 3</h2>
-        <h3>CSS, Media Queries, Flex, XD</h3>
-        <p>
-            This week, I have learnt about HTML Forms,
-        </p>
-        <form action="/some-url" method="GET">
-            <input type="text" placeholder="Type something!">
-        </form>
-        <p>
-            nested elements, descendant selector
-            (best to use at <b>most 3 levels</b>), grouping selectors
-            and CSS style inheritance. I have also learnt about
-            style cascade and specificity with the importance of
-            "!important". Media Queries were useful in website optimization
-            for different screen sizes. Positioning and Flexbox also
-            brought about more dynamic and graphical website designs.
-            The use of wireframs in the design process can also aid in
-            visualization and planning for the creation of the website design.
-        </p>
-    </article>
-    <br>
-    <article>
-        <h2>Week 2</h2>
-        <h3>HTML Semantics and CSS</h3>
-        <p>
-            This week, I learnt about the different sementics used to
-            categorise parts of a website to make it more organized.
-            I have also learnt about the features of CSS and stylesheets
-            to make my website more aesthetic. For example, the use external
-            style sheets, ID attributes, importing fonts etc.
-        </p>
-    </article>
-    <footer>
-        <p id="instagram">My Instagram profile:</p>
-        <img alt="My Profile Picture" src="https://i.ibb.co/1v5s7M0/pfp2.jpg"
-        width="50" height="50"
-        title="caffienated.">
-        <a href="https://www.instagram.com/aloofscoffee/"
-        title="Follow me if you would like! :D">https://www.instagram.com/aloofscoffee/</a>
-    </footer>
+    <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="devblog.html">MrvDev Blog</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Marvin's Dev Blog</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#home">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Weekly Updates
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#progress">Progress Overview</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#week9">Week 9</a></li>
+                      <li><a class="dropdown-item" href="#week8">Week 8</a></li>
+                      <li><a class="dropdown-item" href="#week7">Week 7</a></li>
+                      <li><a class="dropdown-item" href="#week6">Week 6</a></li>
+                      <li><a class="dropdown-item" href="#week4">Week 4</a></li>
+                      <li><a class="dropdown-item" href="#week3">Week 3</a></li>
+                      <li><a class="dropdown-item" href="#week2">Week 2</a></li>
+                    </ul>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://github.com/s10260527/Marvin-s-dev-blog">GitHub Repository</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#footer">Socials</a>
+                </li>
+              </ul>
+              <form class="d-flex mt-3 mt-lg-0" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    <div class="wrapper">
+        <header id="home">
+            <img src="images/bg-main.jpg" class="background" alt="Background Image">
+            <img src="images/bg.mountains.png" class="foreground" alt="Foreground Image">
+            <h1 class="title">Welcome to<br>Marvin's<br>Dev Blog! 👋</h1>
+        </header>
+        <section class="page-start">
+            <div>
+                <p>
+                    On this site, I will be posting weekly updates on my progress of learning <u>Front-End Development</u>.
+                    As I learn more about FED, I will hopefully improve this website along the way.
+                    Thanks for joining along! 😄
+                </p>
+            </div>
+            <br>
+            <div class="card text-center text-bg-dark" id="progress">
+              <div class="card-header">Progress Overview</div>
+              <div class="card-body">
+                <h5 class="card-title">Week 9 of 16</h5>
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="56" aria-valuemin="0" aria-valuemax="100" style="width: 56%"></div>
+                </div>
+                <p class="card-text">
+                  <ul class="list-unstyled">
+                    <li><strong>What I have learnt so far...</strong></li>
+                      <li>Bootstrap</li>
+                      <li>APIs</li>
+                      <li>DOMs, Events, Storage</li>
+                      <li>JavaScript</li>
+                      <li>Responsive Images and Flex Layouts</li>
+                      <li>Forms, CSS Flexbox, Media Queries</li>
+                      <li>HTML Semantics and CSS Basics</li>
+                    </li>
+                  </ul>
+                </p>
+                <p class="card-text"><small class="text-secondary">Last updated on 27/12/2023</small></p>
+              </div>
+            </div>
+            <br>
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col" id="week9">
+                    <div class="card text-bg-primary mb-3 h-100">
+                        <div class="card-header">Week 9</div>
+                        <div class="card-body">
+                          <h5 class="card-title">Bootstrap</h5>
+                          <p class="card-text">
+                            This week, I have learnt about the uses of Bootstrap, especially when creating 
+                            User Interfaces and resolving issues imposed by various browsers and devices. Its 
+                            Flexbox grids and device breakpoints make it easier and faster for developers to design 
+                            and create a website. Using CSS libraries like Bootstrap has made it so that I do not have to 
+                            "memorize stuff", but instead focus on creating "new stuff". Bootstrap utilities, components and 
+                            documentation has made the process of coding a website more streamline for developers like myself.
+                          </p>
+                          <p class="card-text"><small class="text-body-secondary">Last updated on 27/12/2023</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" id="week8">
+                    <div class="card text-bg-primary mb-3 h-100">
+                        <div class="card-header">Week 8</div>
+                        <div class="card-body">
+                          <h5 class="card-title">APIs</h5>
+                          <p class="card-text">
+                            This week, I learnt how to use and implement APIs into my website. By using the FETCH method with JSON,
+                             I was able to create a GET request to the API and retrieve data from it. I also learnt about the uses of 
+                             AJAX to send and request data from a server in the background without disturbing the current page (like 
+                             Single Page Applications).
+                          </p>
+                          <p class="card-text"><small class="text-body-secondary">Last updated on 04/12/2023</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" id="week7">
+                    <div class="card text-bg-primary mb-3 h-100">
+                        <div class="card-header">Week 7</div>
+                        <div class="card-body">
+                          <h5 class="card-title">DOMs, Events, Storage</h5>
+                          <p class="card-text">
+                            This week, I learnt about the Document Object Model (DOM) and how it is used to represent and interact with 
+                            objects in HTML. I also learnt about the different types of events and how they are used to trigger functions 
+                            in JavaScript. Lastly, I learnt about the different types of storage (session, local) and how they are 
+                            used for different purposes to store data whether on a server or on the client side.
+                          </p>
+                          <p class="card-text"><small class="text-body-secondary">Last updated on 27/11/2023</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" id="week6">
+                    <div class="card text-bg-primary mb-3 h-100">
+                        <div class="card-header">Week 6</div>
+                        <div class="card-body">
+                          <h5 class="card-title">JavaScript</h5>
+                          <p class="card-text">
+                            This week, I learnt about the basics of JavaScript and how it is used to make websites more interactive. 
+                            I learnt about the different types of variables, functions, loops and arrays. I also learnt about the 
+                            different types of operators and how they are used to manipulate data, as well as the 
+                            different types of data types and how they are used to store data. In addition, I learnt about the 
+                            Object Oriented Programming (OOP) functions in JavaScript and how they are used to create and manipulate objects.
+                          </p>
+                          <p class="card-text"><small class="text-body-secondary">Last updated on 20/11/2023</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" id="week4">
+                    <div class="card text-bg-primary mb-3 h-100">
+                        <div class="card-header">Week 4</div>
+                        <div class="card-body">
+                          <h5 class="card-title">Responsive Images and Flex Layouts</h5>
+                          <p class="card-text">
+                            This week, I learnt about the different types of responsive images and how they are used to 
+                            display images on different devices. I also learnt about the different types of flex layouts 
+                            and how they are used to display content on a website. Learning about the different 
+                            types of media queries and how they are used to display content on different devices made my 
+                            web designs more responsive and user-friendly.
+                          </p>
+                          <p class="card-text"><small class="text-body-secondary">Last updated on 6/11/2023</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" id="week3">
+                    <div class="card text-bg-primary mb-3 h-100">
+                        <div class="card-header">Week 3</div>
+                        <div class="card-body">
+                          <h5 class="card-title">Forms, CSS Flexbox, Media Queries</h5>
+                          <p class="card-text">
+                            This week, I learnt about the different types of forms and how they are used to collect data from users. 
+                            I also learnt about the different types of Flexbox layouts and Media Queries and how they 
+                            are used to display content on a website and make it responsive, adapting content to the screen size of the user.
+                          </p>
+                          <p class="card-text"><small class="text-body-secondary">Last updated on 30/10/2023</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" id="week2">
+                    <div class="card text-bg-primary mb-3 h-100">
+                        <div class="card-header">Week 2</div>
+                        <div class="card-body">
+                          <h5 class="card-title">HTML Semantics and CSS Basics</h5>
+                          <p class="card-text">
+                            This week, I learnt about the different types of HTML semantics and how they are used to structure 
+                            content on a website. I also learnt about the different types of CSS selectors and how they are used 
+                            to select and style elements on a website.
+                          </p>
+                          <p class="card-text"><small class="text-body-secondary">Last updated on 23/10/2023</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </section>
+        <div class="footer-box" id="footer">
+          <div class="website">
+              <h1>MrvDev Blog</h1>
+              <p>My personal website blog! :)</p>
+          </div>
+          <div class="copy-right">
+              <p>Copyright © 2023 MrvDev Blog</p>
+          </div>
+          <div class="socials">
+              <h2>My Socials</h2>
+              <div class="social-icon">
+                  <a href="https://www.instagram.com/aloofscoffee/"><img src="images/social-instagram.png" alt="Instagram"></a>
+                  <a href="https://www.linkedin.com/in/hengmrv/"><img src="images/social-linkedin.png" alt="LinkedIn"></a>
+                  <a href="https://github.com/s10260527"><img src="images/social-github.png" alt="GitHub"></a>
+                  <a href="https://www.youtube.com/@aloofscoffee"><img src="images/social-youtube.png" alt="YouTube"></a>
+                  <a href="https://www.reddit.com/user/aloofscoffee"><img src="images/social-reddit.png" alt="Reddit"></a>
+                  <a href="https://www.pinterest.com/aloofscoffee/"><img src="images/social-pinterest.png" alt="Pinterest"></a>
+              </div>
+          </div>
+          <div class="mailing-list">
+              <h2>Join the mailing list!</h2>
+              <form action="#" method="GET">
+                  <input type="email" placeholder="Enter email address" required>
+                  <p>Stay updated on the latest posts!</p>
+                  <input type="submit" value="Subscribe">
+              </form>
+          </div>
+        </div>
+    </div>
 </body>
 </html>
