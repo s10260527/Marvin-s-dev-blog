@@ -1,0 +1,42 @@
+/* Hanken Grotesk */
+@font-face {
+    font-family: "Hanken Grotesk";
+    src: url(fonts/Hanken-Grotesk-Regular.ttf);
+}
+/* Frankfuter Std */
+@font-face {
+    font-family: "Frankfurter Std";
+    src: url(fonts/Frankfurter-Std-Regular.otf);
+}
+/* Frankfurter D */
+@font-face {
+    font-family: "Frankfurter D";
+    src: url(fonts/Frankfurter-D-Regular.ttf);
+}
+
+*,html{font-family: Frankfurter Std;}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.animation-center{  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loading-text{
+    display: block;
+    text-align: center;
+    color: #0d6efd;
+    position: relative;
+}
+.countdown{
+    display: block;
+    text-align: center;
+    color: #0d6efd;
+    position: relative;
+    font-family: Hanken Grotesk;
+    font-style: italic;
+}
