@@ -16,3 +16,11 @@ const intervalId = setInterval(() => {
     clearInterval(intervalId);
   }
 }, 1000);
+
+window.onload = function() {
+  setTimeout(function() {
+    var directLink = document.querySelector('.direct-link');
+    directLink.style.visibility = 'visible';
+    directLink.style.pointerEvents = 'auto';
+  }, 4000);
+};
